@@ -306,18 +306,18 @@ svg {
 
 /* フッター */
 .footer {
+	position: relative;
 	padding-top: 60px;
 	padding-bottom: 60px;
 	color: #fff;
-    background-image: url(/images/pattern.jpg);
-    background-size: cover;
-    background-color: #477294;
+  background-image: none;
+  background-size: cover;
+  background-color: #477294;
 }
 
 .footer .container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	position: relative;
+	z-index: 10;
 }
 
 .footer .site {
@@ -327,6 +327,15 @@ svg {
 	margin-top: 20px;
 	margin-bottom: 50px;
 	font-size: 14px;
+}
+
+.footer .back {
+	position: absolute;
+	top: 0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 
 @media (min-width: 768px) {
