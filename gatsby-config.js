@@ -6,7 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  siteMetadata:{
+  siteMetadata: {
     title: `タイトルが入ります`,
     description: `説明が入ります`,
     lang: `ja`,
@@ -39,4 +39,4 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
   ],
-}
+};
