@@ -20,12 +20,16 @@ export default function About({ data, location }) {
       />
       <div className="eyecatch">
         <figure>
+<<<<<<< HEAD
           <Img
             fluid={data.about.childImageSharp.fluid}
             alt=""
             loading="eager"
             durationFadeIn={100}
           />
+=======
+          <Img fluid={data.about.childImageSharp.fluid} alt="" />
+>>>>>>> 17305be0d09ba8954486a56eca25423611d6cff2
         </figure>
       </div>
       <article className="content">

@@ -15,12 +15,23 @@ export default function Home({ data }) {
             fluid={data.hero.childImageSharp.fluid}
             alt=""
             style={{ height: "100%" }}
+<<<<<<< HEAD
             loading="eager"
             durationFadeIn={100}
           />
         </figure>
         <div className="catch">
           <h1>Hayato Hasegawa</h1>
+=======
+          />
+        </figure>
+        <div className="catch">
+          <h1>
+            There is no love sincerer than
+            <br /> the love of food.
+          </h1>
+          <p>食物を愛するよりも誠実な愛はない ― バーナード・ショー</p>
+>>>>>>> 17305be0d09ba8954486a56eca25423611d6cff2
         </div>
         <div className="wave">
           <svg
