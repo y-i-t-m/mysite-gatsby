@@ -12,7 +12,16 @@ body {
 	margin: 0 auto;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ul, figure {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+figure {
 	margin: 0;
 	padding: 0;
 }
@@ -86,6 +95,7 @@ svg {
 	.nav ul {
 		margin-top: 0;
 	}
+
 	.header .container {
 		flex-direction: row;
 		justify-content: space-between;
@@ -123,13 +133,14 @@ svg {
 	justify-content: center;
 	text-align: center;
 	color: #fff;
-	text-shadow: 0 0 20px rgba(0,0,0,0.5);
+	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .hero .catch h1 {
 	font-size: 20px;
 	margin-bottom: 10px;
 }
+
 .hero .catch p {
 	font-size: 10px;
 }
@@ -151,10 +162,12 @@ svg {
 	.hero figure img {
 		height: 750px;
 	}
+
 	.hero .catch h1 {
 		font-size: 40px;
 		margin-bottom: 30px;
 	}
+
 	.hero .catch p {
 		font-size: 16px;
 	}
@@ -165,6 +178,7 @@ svg {
 		font-size: 56px;
 		margin-bottom: 30px;
 	}
+
 	.hero .catch p {
 		font-size: 24px;
 	}
@@ -182,6 +196,7 @@ svg {
 	margin-bottom: 20px;
 	font-size: 36px;
 }
+
 .food h2 span {
 	font-weight: normal;
 }
@@ -200,11 +215,13 @@ svg {
 	margin-bottom: 16px;
 	font-size: 30px;
 }
+
 .detail p:first-of-type {
 	margin-bottom: 30px;
 	color: #477294;
 	font-size: 19px;
 }
+
 .detail p:last-of-type {
 	font-size: 14px;
 	line-height: 1.8;
@@ -215,9 +232,11 @@ svg {
 		display: flex;
 		justify-content: space-between;
 	}
+
 	.detail {
 		width: 31.5%
 	}
+
 	.detail p:last-of-type {
 		font-size: 11px;
 	}
@@ -235,6 +254,7 @@ svg {
 	padding-bottom: 16px;
 	position: relative;
 }
+
 .bar::before,
 .bar::after {
 	display: block;
@@ -244,10 +264,12 @@ svg {
 	height: 1px;
 	position: absolute;
 }
+
 .bar::before {
 	left: 0;
 	bottom: 6px;
 }
+
 .bar::after {
 	right: 0;
 	bottom: 0;
@@ -272,9 +294,11 @@ svg {
 	.content .bar {
 		max-width: none;
 	}
+
 	.content .bar::before {
 		width: 312px;
 	}
+
 	.content .bar::after {
 		width: 81%;
 	}
@@ -294,9 +318,9 @@ svg {
 }
 
 @media (min-width: 768px) {
-.photo figure {
-	height: 367px;
-}
+	.photo figure {
+		height: 367px;
+	}
 
 	.photo img {
 		height: 367px;
@@ -310,9 +334,9 @@ svg {
 	padding-top: 60px;
 	padding-bottom: 60px;
 	color: #fff;
-  background-image: none;
-  background-size: cover;
-  background-color: #477294;
+	background-image: none;
+	background-size: cover;
+	background-color: #477294;
 }
 
 .footer .container {
@@ -323,6 +347,7 @@ svg {
 .footer .site {
 	text-align: center;
 }
+
 .footer .site p {
 	margin-top: 20px;
 	margin-bottom: 50px;
@@ -332,7 +357,7 @@ svg {
 .footer .back {
 	position: absolute;
 	top: 0;
-	bottom:0;
+	bottom: 0;
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -354,6 +379,7 @@ svg {
 	.footer .site {
 		text-align: left;
 	}
+
 	.footer .site p {
 		margin-top: 10px;
 		margin-bottom: 0;
@@ -389,14 +415,16 @@ svg {
 	font-size: 24px;
 }
 
-.postbody > * {
+.postbody>* {
 	margin-bottom: 2em;
 }
+
 .postbody h2 {
 	margin-top: 2.5em;
 	margin-bottom: 1.5em;
 	font-size: 20px;
 }
+
 .postbody h2 [class*="fa-"] {
 	margin-right: 15px;
 	color: #477294;
@@ -405,9 +433,11 @@ svg {
 .postbody p {
 	line-height: 1.8;
 }
+
 .postbody ul {
 	padding-left: 30px;
 }
+
 .postbody li:not(:last-child) {
 	margin-bottom: 1em;
 }
@@ -434,6 +464,7 @@ svg {
 	color: #477294;
 	font-size: 14px;
 }
+
 .info [class*="fa-"] {
 	margin-right: 10px;
 }
@@ -454,6 +485,7 @@ svg {
 	list-style: none;
 	display: inline-flex;
 }
+
 .info .cat li:not(:last-child)::after {
 	content: '・';
 	margin: 0 5px;
@@ -496,6 +528,7 @@ svg {
 .postlink .prev [class*="fa-"] {
 	margin-right: 10px;
 }
+
 .postlink .next [class*="fa-"] {
 	margin-left: 10px;
 }
@@ -529,6 +562,7 @@ svg {
 	height: 150px;
 	object-fit: cover;
 }
+
 .posts h3 {
 	margin-top: 10px;
 	font-size: 14px;
@@ -566,6 +600,7 @@ svg {
 	display: flex;
 	align-items: center;
 }
+
 .pagenation .next a {
 	justify-content: flex-end;
 }
@@ -573,6 +608,7 @@ svg {
 .pagenation .prev [class*="fa-"] {
 	margin-right: 10px;
 }
+
 .pagenation .next [class*="fa-"] {
 	margin-left: 10px;
 }
