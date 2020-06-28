@@ -5,9 +5,9 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container">
-        <div className="site">
-          <Link to={"/"}>長谷川 駿 / Hayato Hasegawa </Link>
-        </div>
+        <h1 className="site">
+          <Link to={"/"}>Hayato Hasegawa </Link>
+        </h1>
         <nav className="nav">
           <ul>
             <li>

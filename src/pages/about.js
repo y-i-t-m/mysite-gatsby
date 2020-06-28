@@ -14,14 +14,14 @@ export default function About({ data, location }) {
         pagetitle="ABOUT"
         pagedesc="ABOUTページの説明が入ります"
         pagepath={location.pathname}
-        pageimg={data.about.childImageSharp.original.src}
-        pageimgw={data.about.childImageSharp.original.width}
-        pageimgh={data.about.childImageSharp.original.height}
+        pageimg={data.aboutHero.childImageSharp.original.src}
+        pageimgw={data.aboutHero.childImageSharp.original.width}
+        pageimgh={data.aboutHero.childImageSharp.original.height}
       />
       <div className="eyecatch">
         <figure>
           <Img
-            fluid={data.about.childImageSharp.fluid}
+            fluid={data.aboutHero.childImageSharp.fluid}
             alt=""
             loading="eager"
             durationFadeIn={100}
@@ -30,7 +30,7 @@ export default function About({ data, location }) {
       </div>
       <article className="content">
         <div className="container">
-          <h1 className="bar">ESSENTIALSについて</h1>
+          <h1 className="bar">About Page</h1>
           <aside className="info">
             <div className="subtitle">
               <FontAwesomeIcon icon={faUtensils} />
@@ -72,10 +72,10 @@ export default function About({ data, location }) {
 
 export const query = graphql`
   query {
-    about: file(relativePath: { eq: "about.jpg" }) {
+    aboutHero: file(relativePath: { eq: "about_hero.jpg" }) {
       relativePath
       childImageSharp {
-        fluid(maxWidth: 1600) {
+        fluid(maxWidth: 1600, quality: 95) {
           ...GatsbyImageSharpFluid_withWebp
         }
         original {

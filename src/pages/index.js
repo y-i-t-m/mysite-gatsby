@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 
 import Layout from "../components/layout";
@@ -91,6 +91,28 @@ export default function Home({ data }) {
           />
         </figure>
       </section>
+
+      <section>
+        <div className="container">
+          <h2 className="sr-only">RECENT POSTS</h2>
+          <div className="posts">
+            {data.allContentfulBlogPost.edges.map(({ node }) => (
+              <article className="post" key={node.id}>
+                <Link to={`/blog/post/${node.slug}/`}>
+                  <figure>
+                    <Img
+                      fluid={node.thumbnail.fluid}
+                      alt={node.thumbnail.description}
+                      style={{ height: "100%" }}
+                    />
+                  </figure>
+                  <h3>{node.title}</h3>
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }
@@ -100,7 +122,7 @@ export const query = graphql`
     hero: file(relativePath: { eq: "hero.jpg" }) {
       relativePath
       childImageSharp {
-        fluid(maxWidth: 1600) {
+        fluid(maxWidth: 1600, quality: 95) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
@@ -138,11 +160,31 @@ export const query = graphql`
       }
     }
 
-    pattern: file(relativePath: { eq: "pattern.jpg" }) {
+    footer: file(relativePath: { eq: "footer.jpg" }) {
       relativePath
       childImageSharp {
         fluid(maxWidth: 1920, quality: 90) {
           ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+
+    allContentfulBlogPost(
+      sort: { order: DESC, fields: createdDate }
+      skip: 0
+      limit: 4
+    ) {
+      edges {
+        node {
+          title
+          id
+          slug
+          thumbnail {
+            fluid(maxWidth: 573) {
+              ...GatsbyContentfulFluid_withWebp
+            }
+            description
+          }
         }
       }
     }

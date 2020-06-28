@@ -334,9 +334,7 @@ svg {
 	padding-top: 60px;
 	padding-bottom: 60px;
 	color: #fff;
-	background-image: none;
-	background-size: cover;
-	background-color: #477294;
+	background-color: #444;
 }
 
 .footer .container {

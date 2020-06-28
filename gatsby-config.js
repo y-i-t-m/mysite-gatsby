@@ -7,8 +7,8 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `タイトルが入ります`,
-    description: `説明が入ります`,
+    title: `長谷川 駿のサイト`,
+    description: `長谷川 駿のサイト`,
     lang: `ja`,
     siteUrl: `https://hasegawahayato.netlify.app`,
     locale: `ja_JP`,
@@ -32,11 +32,19 @@ module.exports = {
         short_name: `hase`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#477294`,
+        theme_color: `#333`,
         display: `standalone`,
         icon: `src/images/icon.png`,
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: "sl8u4gxs0och",
+        accessToken: "OL8e_oVBioNDbau1N3sRwZS2SZN4BlPeaV41KFm6H3I",
+        host: "cdn.contentful.com",
+      },
+    },
   ],
 };
