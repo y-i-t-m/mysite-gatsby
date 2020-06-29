@@ -15,12 +15,12 @@ export default ({ data, location, pageContext }) => (
   <Layout>
     <SEO
       pagetitle="ブログ"
-      pagedesc="ESSENTIALSのブログです"
+      pagedesc="長谷川 駿のブログです"
       pagepath={location.pathname}
     />
     <section className="content bloglist">
       <div className="container">
-        <h1 className="bar">RECENT POSTS</h1>
+        <h1 className="bar">ブログ記事一覧</h1>
         <div className="posts">
           {data.allContentfulBlogPost.edges.map(({ node }) => (
             <article className="post" key={node.id}>
@@ -32,7 +32,7 @@ export default ({ data, location, pageContext }) => (
                     style={{ height: "100%" }}
                   />
                 </figure>
-                <h3>{node.title}</h3>
+                <h3 className="post__title">{node.title}</h3>
               </Link>
             </article>
           ))}

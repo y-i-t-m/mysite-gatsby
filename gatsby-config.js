@@ -28,8 +28,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `hayato hasegawa`,
-        short_name: `hase`,
+        name: `長谷川 駿のサイト`,
+        short_name: `はせサイト`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#333`,

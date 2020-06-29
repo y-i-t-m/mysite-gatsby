@@ -5,7 +5,7 @@ import SEO from "../components/seo";
 
 import Layout from "../components/layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUtensils, faCheckSquare } from "@fortawesome/free-solid-svg-icons";
+import { faCheckSquare } from "@fortawesome/free-solid-svg-icons";
 
 export default function About({ data, location }) {
   return (
@@ -31,38 +31,42 @@ export default function About({ data, location }) {
       <article className="content">
         <div className="container">
           <h1 className="bar">About Page</h1>
-          <aside className="info">
+          {/* <aside className="info">
             <div className="subtitle">
               <FontAwesomeIcon icon={faUtensils} />
               ABOUT ESSENTIALS
             </div>
-          </aside>
+          </aside> */}
           <div className="postbody">
             <p>
-              体に必要不可欠な食べ物についての情報を発信しているサイトです。「おいしい食材をおいしく食べる」をモットーにしています。特に力を入れているのが、フルーツ、穀物、飲み物の３つです。
+              現在、Web制作について勉強しています。最近はJamstack開発に興味があります。
             </p>
             <h2>
               <FontAwesomeIcon icon={faCheckSquare} />
-              公開している記事
+              プロフィール
             </h2>
-            <p>
-              これらについて、次のような記事やレシピなどを書いて公開しています。
-            </p>
             <ul>
-              <li>ヘルシーで美味しい料理の研究・レビュー・レシピ。</li>
-              <li>一人でも、家族や友人と一緒にでも楽しめる料理。</li>
-              <li>
-                ユーザー間のオープンなコミュニケーションを基盤とした情報。
-              </li>
+              <li>長谷川 駿 - はせがわ はやと</li>
+              <li>1997年12月25日 - 22歳</li>
             </ul>
             <h2>
               <FontAwesomeIcon icon={faCheckSquare} />
-              よく聞かれること
+              スキル
             </h2>
-            <p>
-              よく聞かれることなのですが、私たちはスタートアップではありません。私たちはまだスタートしたばかりで、より多くの人々が食べやすい食べ物がもたらす違いを発見できるように、成長しサービスを改善する機会を待っています。
-            </p>
-            <p>気長にお付き合いいただければ幸いです。</p>
+            <ul>
+              <li>HTML5 / CSS3</li>
+              <li>JavaScript</li>
+              <li>Sass (Scss)</li>
+            </ul>
+            <h2>
+              <FontAwesomeIcon icon={faCheckSquare} />
+              趣味
+            </h2>
+            <ul>
+              <li>読書</li>
+              <li>野球観戦</li>
+              <li>写真</li>
+            </ul>
           </div>
         </div>
       </article>

@@ -39,43 +39,34 @@ export default function Home({ data }) {
       <section className="food">
         <div className="container">
           <h2 className="bar">
-            Food <span>Essence</span>
+            やっていること
           </h2>
           <div className="details">
             <div className="detail">
               <figure>
-                <Img fluid={data.fruit.childImageSharp.fluid} alt="" />
+                <Img fluid={data.code.childImageSharp.fluid} alt="" />
               </figure>
-              <h3>フルーツ</h3>
-              <p>FRUIT</p>
+              <h3>コーディング</h3>
               <p>
-                甘くてすっぱくておいしい果実たち。
-                <br />
-                旬のフルーツを満喫します。
+                ランディングページの制作を1件しました。
               </p>
             </div>
             <div className="detail">
               <figure>
-                <Img fluid={data.grain.childImageSharp.fluid} alt="" />
+                <Img fluid={data.code.childImageSharp.fluid} alt="" />
               </figure>
-              <h3>穀物</h3>
-              <p>GRAIN</p>
+              <h3>コーディング</h3>
               <p>
-                食事の基本となる穀物。
-                <br />
-                毎日の活動のエネルギー源になります。
+                ランディングページの制作を1件しました。
               </p>
             </div>
             <div className="detail">
               <figure>
-                <Img fluid={data.beverage.childImageSharp.fluid} alt="" />
+                <Img fluid={data.code.childImageSharp.fluid} alt="" />
               </figure>
-              <h3>飲み物</h3>
-              <p>BEVERAGE</p>
+              <h3>コーディング</h3>
               <p>
-                リラックスするのに欠かせない飲み物。
-                <br />
-                お気に入りの一杯はありますか？
+                ランディングページの制作を1件しました。
               </p>
             </div>
           </div>
@@ -85,7 +76,7 @@ export default function Home({ data }) {
         <h2 className="sr-only">Photo</h2>
         <figure>
           <Img
-            fluid={data.berry.childImageSharp.fluid}
+            fluid={data.bg.childImageSharp.fluid}
             alt="赤く熟したベリー"
             style={{ height: "100%" }}
           />
@@ -94,7 +85,7 @@ export default function Home({ data }) {
 
       <section>
         <div className="container">
-          <h2 className="sr-only">RECENT POSTS</h2>
+          <h2 className="bar section__title">最新の記事一覧</h2>
           <div className="posts">
             {data.allContentfulBlogPost.edges.map(({ node }) => (
               <article className="post" key={node.id}>
@@ -106,7 +97,7 @@ export default function Home({ data }) {
                       style={{ height: "100%" }}
                     />
                   </figure>
-                  <h3>{node.title}</h3>
+                  <h3 className="post__title">{node.title}</h3>
                 </Link>
               </article>
             ))}
@@ -127,7 +118,7 @@ export const query = graphql`
         }
       }
     }
-    fruit: file(relativePath: { eq: "fruit.jpg" }) {
+    code: file(relativePath: { eq: "code.png" }) {
       relativePath
       childImageSharp {
         fluid(maxWidth: 320) {
@@ -135,7 +126,7 @@ export const query = graphql`
         }
       }
     }
-    grain: file(relativePath: { eq: "grain.jpg" }) {
+    code: file(relativePath: { eq: "code.png" }) {
       relativePath
       childImageSharp {
         fluid(maxWidth: 320) {
@@ -143,7 +134,7 @@ export const query = graphql`
         }
       }
     }
-    beverage: file(relativePath: { eq: "beverage.jpg" }) {
+    code: file(relativePath: { eq: "code.png" }) {
       relativePath
       childImageSharp {
         fluid(maxWidth: 320) {
@@ -151,10 +142,10 @@ export const query = graphql`
         }
       }
     }
-    berry: file(relativePath: { eq: "berry.jpg" }) {
+    bg: file(relativePath: { eq: "bg.jpg" }) {
       relativePath
       childImageSharp {
-        fluid(maxWidth: 1600) {
+        fluid(maxWidth: 1600, quality: 80) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
