@@ -31,12 +31,6 @@ export default function About({ data, location }) {
       <article className="content">
         <div className="container">
           <h1 className="bar">About Page</h1>
-          {/* <aside className="info">
-            <div className="subtitle">
-              <FontAwesomeIcon icon={faUtensils} />
-              ABOUT ESSENTIALS
-            </div>
-          </aside> */}
           <div className="postbody">
             <p>
               現在、Web制作について勉強しています。最近はJamstack開発に興味があります。
@@ -55,8 +49,9 @@ export default function About({ data, location }) {
             </h2>
             <ul>
               <li>HTML5 / CSS3</li>
-              <li>JavaScript</li>
+              <li>JavaScript / TypeScript</li>
               <li>Sass (Scss)</li>
+              <li>GatsbyJS</li>
             </ul>
             <h2>
               <FontAwesomeIcon icon={faCheckSquare} />

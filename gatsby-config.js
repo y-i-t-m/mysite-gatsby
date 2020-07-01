@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -41,9 +45,16 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: "sl8u4gxs0och",
-        accessToken: "OL8e_oVBioNDbau1N3sRwZS2SZN4BlPeaV41KFm6H3I",
-        host: "cdn.contentful.com",
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        host: process.env.CONTENTFUL_HOST,
+      },
+    },
+
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
   ],
